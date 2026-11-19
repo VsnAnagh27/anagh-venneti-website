@@ -1,7 +1,14 @@
+
 name = "anagh-venneti-site"
-pages_build_output_dir = "."
+main = "./dist/worker/index.js"
+compatibility_date = "2026-11-20"
+
+[assets]
+directory = "."
+binding = "ASSETS"
+run_worker_first = ["/api/*"]
 
 [[d1_databases]]
 binding = "ACCESS_DB"
 database_name = "anagh-document-access"
-database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+database_id = "YOUR_ACTUAL_D1_DATABASE_UUID"
