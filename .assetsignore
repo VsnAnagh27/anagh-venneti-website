@@ -1,0 +1,27 @@
+
+# Git and development files
+.git/
+.github/
+.wrangler/
+node_modules/
+
+# Backend source and database schema
+functions/
+*.sql
+
+# Build and deployment files
+dist/
+scripts/
+wrangler.toml
+requirements.txt
+
+# Documentation
+README.md
+
+# Secrets and environment files
+.env
+.env.*
+.dev.vars*
+
+# Ignore this configuration file itself
+.assetsignore
