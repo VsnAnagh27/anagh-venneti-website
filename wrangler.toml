@@ -1,6 +1,6 @@
 
 name = "anagh-venneti-site"
-main = "./_worker.js"
+main = "./dist/worker/index.js"
 compatibility_date = "2026-11-20"
 
 [assets]
