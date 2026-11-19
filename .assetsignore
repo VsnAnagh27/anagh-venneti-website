@@ -25,3 +25,4 @@ README.md
 
 # Ignore this configuration file itself
 .assetsignore
+_worker.js
