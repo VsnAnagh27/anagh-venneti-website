@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Research Dashboard — Anagh Venneti. Citation analytics, publication timeline, topic distribution." />
+  <title>Dashboard — Anagh Venneti</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@300;400;500&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">A.<span>Venneti</span></a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="dashboard.html" class="active">Dashboard</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="notes.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="../assets/thesis.pdf" data-doc-access="thesis" data-doc-url="../assets/thesis.pdf" target="_blank">Thesis</a>
+      <a href="../assets/cv.pdf" class="btn btn-sm" style="margin-left:.5rem;" target="_blank" data-doc-access="cv" data-doc-url="../assets/cv.pdf">CV</a>
+    </div>
+    <button class="nav-toggle"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-mobile">
+  <a href="../index.html">Home</a>
+  <a href="research.html">Research</a>
+  <a href="publications.html">Publications</a>
+  <a href="dashboard.html">Dashboard</a>
+  <a href="timeline.html">Timeline</a>
+  <a href="notes.html">Blog</a>
+  <a href="contact.html">Contact</a>
+  <a href="../assets/cv.pdf" target="_blank" data-doc-access="cv" data-doc-url="../assets/cv.pdf">Curriculum Vitae ↗</a>
+</div>
+
+<main class="page-content">
+
+  <section class="section-sm" style="border-bottom:1px solid var(--border-subtle);">
+    <div class="container">
+      <div class="dash-page-header animate-fade-up">
+        <div>
+          <span class="label">Research Analytics</span>
+          <h1 style="margin-top:.6rem; font-size:clamp(1.8rem,4vw,2.8rem);">Dashboard</h1>
+        </div>
+        <div class="dash-update-note">
+          <span class="label">Data source</span>
+          <span id="last-updated-date" style="font-family:var(--font-mono);font-size:.75rem;color:var(--text-muted);">loading…</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metric cards -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="metric-cards animate-fade-up delay-100" id="metric-cards">
+        <div class="loading-dots" style="margin:2rem 0;"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Charts row 1 -->
+  <section class="section">
+    <div class="container">
+      <div class="charts-row-2">
+        <div class="chart-panel reveal">
+          <div class="chart-panel-header">
+            <span class="label">Output timeline</span>
+            <h3>Publications per Year</h3>
+          </div>
+          <div class="chart-wrap"><canvas id="chart-pubs-year"></canvas></div>
+        </div>
+        <div class="chart-panel reveal delay-200">
+          <div class="chart-panel-header">
+            <span class="label">Journal venues</span>
+            <h3>Publications by Journal</h3>
+          </div>
+          <div class="chart-wrap"><canvas id="chart-journals"></canvas></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Charts row 2 -->
+  <section class="section">
+    <div class="container">
+      <div class="charts-row-2">
+        <div class="chart-panel reveal">
+          <div class="chart-panel-header">
+            <span class="label">Research themes</span>
+            <h3>Topic Distribution</h3>
+          </div>
+          <div class="chart-wrap chart-wrap-donut"><canvas id="chart-topics"></canvas></div>
+        </div>
+        <div class="chart-panel reveal delay-200">
+          <div class="chart-panel-header">
+            <span class="label">Contribution</span>
+            <h3>Author Position</h3>
+          </div>
+          <div class="chart-wrap chart-wrap-donut"><canvas id="chart-authorship"></canvas></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Publication timeline -->
+  <section class="section">
+    <div class="container">
+      <header class="section-header reveal">
+        <span class="label">Chronology</span>
+        <h2>Publication Timeline</h2>
+      </header>
+      <div id="pub-timeline" class="pub-timeline"></div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Journal table -->
+  <section class="section">
+    <div class="container">
+      <header class="section-header reveal">
+        <span class="label">Venue breakdown</span>
+        <h2>Journal Summary</h2>
+      </header>
+      <div id="journal-table" class="journal-table reveal"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a class="icon-link" href="../index.html">Home</a>
+        <a class="icon-link" href="publications.html">Publications</a>
+        <a class="icon-link" href="research.html">Research</a>
+        <a class="icon-link" href="contact.html">Contact</a>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Anagh Venneti.</p>
+        <p>Data from <a href="publications.html" style="color:var(--text-accent);">publications.json</a> · Auto-updated via GitHub Actions</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/nav.js"></script>
+<script src="../js/dashboard.js"></script>
+<script src="../js/doc-access.js" defer></script>
+</body>
+</html>

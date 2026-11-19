@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Research — Anagh Venneti. Dense matter EOS, neutron star astrophysics, gravitational waves, Bayesian inference." />
+  <title>Research — Anagh Venneti</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@300;400;500&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/research.css" />
+  <!-- KaTeX for equation rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">A.<span>Venneti</span></a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="research.html" class="active">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="notes.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="../assets/thesis.pdf" data-doc-access="thesis" data-doc-url="../assets/thesis.pdf" target="_blank">Thesis</a>
+      <a href="../assets/cv.pdf" class="btn btn-sm" style="margin-left:.5rem;" target="_blank" data-doc-access="cv" data-doc-url="../assets/cv.pdf">CV</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-mobile">
+  <a href="../index.html">Home</a>
+  <a href="research.html">Research</a>
+  <a href="publications.html">Publications</a>
+  <a href="dashboard.html">Dashboard</a>
+  <a href="timeline.html">Timeline</a>
+  <a href="notes.html">Blog</a>
+  <a href="contact.html">Contact</a>
+  <a href="../assets/cv.pdf" target="_blank" data-doc-access="cv" data-doc-url="../assets/cv.pdf">Curriculum Vitae ↗</a>
+</div>
+
+<main class="page-content">
+
+  <!-- Page header -->
+  <section class="section-sm" style="border-bottom:1px solid var(--border-subtle);">
+    <div class="container">
+      <span class="label animate-fade-up">Research Programme</span>
+      <h1 class="animate-fade-up delay-100" style="margin-top:.6rem; font-size:clamp(1.8rem,4vw,2.8rem);">Research</h1>
+      <p class="animate-fade-up delay-200" style="margin-top:.75rem; max-width:640px;">
+        My research probes the physics of dense matter through the multi-messenger lens of neutron star astrophysics —
+        combining nuclear theory, Bayesian statistical methods, and gravitational wave observations.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── Overview statement ─────────────────────────────────── -->
+  <section class="section">
+    <div class="container">
+      <div class="research-statement reveal">
+        <div class="rs-accent-bar"></div>
+        <div class="rs-text">
+          <p class="rs-lead">
+            Neutron stars are nature's densest laboratories — their interiors probe
+            quantum chromodynamics at densities 2–10× nuclear saturation, inaccessible
+            to terrestrial experiments. My work develops the statistical and computational
+            machinery to read these laboratories through their observable signatures.
+          </p>
+          <p style="margin-top:1rem;">
+            The central thread is the <em>equation of state</em> of dense nuclear matter: the pressure–density
+            relation that determines the star's structure, stability, and dynamics. Constraining it
+            requires simultaneously interpreting mass, radius, and tidal deformability data within a
+            Bayesian framework anchored in nuclear physics theory.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ── Research threads ───────────────────────────────────── -->
+  <section class="section">
+    <div class="container">
+      <header class="section-header reveal">
+        <span class="label">Core themes</span>
+        <h2>Research Threads</h2>
+      </header>
+
+      <!-- Thread 1 -->
+      <div class="research-thread reveal">
+        <div class="rt-header">
+          <div class="rt-number">01</div>
+          <div>
+            <h3>Dense Matter Equation of State</h3>
+            <div class="rt-tags">
+              <span class="tag">Nuclear Meta-models</span>
+              <span class="tag">Finite Nuclei Constraints</span>
+              <span class="tag">Symmetry Energy</span>
+              <span class="tag">Phase Transitions</span>
+            </div>
+          </div>
+        </div>
+        <div class="rt-body">
+          <div class="rt-description">
+            <p>
+              The nuclear equation of state (EOS) determines how pressure responds to density in
+              neutron-rich matter. My work uses nuclear meta-models — parameterised frameworks
+              constrained simultaneously by finite-nucleus data (binding energies, charge radii,
+              mirror-nuclei charge differences) and astrophysical observables.
+            </p>
+            <p style="margin-top:.85rem;">
+              A key recent result: finite-nuclei constraints dramatically narrow the
+              EOS prior space, particularly in the density range $1\text{–}2\,n_0$, providing
+              tighter predictions for neutron star radii than astrophysical data alone.
+            </p>
+          </div>
+          <div class="rt-eq">
+            <span class="eq-label">Tolman–Oppenheimer–Volkoff</span>
+            <div class="eq-render">
+              $$\frac{dP}{dr} = -\frac{(\varepsilon + P)(m + 4\pi r^3 P)}{r^2\left(1 - \frac{2m}{r}\right)}$$
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Thread 2 -->
+      <div class="research-thread reveal delay-100">
+        <div class="rt-header">
+          <div class="rt-number">02</div>
+          <div>
+            <h3>Hadron–Quark Phase Transitions</h3>
+            <div class="rt-tags">
+              <span class="tag">Hybrid Stars</span>
+              <span class="tag">Quark Matter</span>
+              <span class="tag">Model Selection</span>
+              <span class="tag tag-accent">Active</span>
+            </div>
+          </div>
+        </div>
+        <div class="rt-body">
+          <div class="rt-description">
+            <p>
+              At densities above $\sim 2\text{–}3\,n_0$, hadronic matter may undergo a
+              phase transition to deconfined quark matter, producing "hybrid stars" with
+              quark cores. Whether such stars exist — and are detectable — is an open question.
+            </p>
+            <p style="margin-top:.85rem;">
+              Using Bayesian model comparison, I evaluate competing transition scenarios
+              (Maxwell, Gibbs, crossover) against the full set of NICER, GW170817, and
+              heavy pulsar mass constraints, quantifying their relative evidence.
+            </p>
+          </div>
+          <div class="rt-eq">
+            <span class="eq-label">Maxwell construction</span>
+            <div class="eq-render">
+              $$P_H(\mu_c) = P_Q(\mu_c), \quad \mu_c = \text{transition chemical potential}$$
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Thread 3 -->
+      <div class="research-thread reveal delay-200">
+        <div class="rt-header">
+          <div class="rt-number">03</div>
+          <div>
+            <h3>Bayesian Multi-Messenger Inference</h3>
+            <div class="rt-tags">
+              <span class="tag">MCMC</span>
+              <span class="tag">Nested Sampling</span>
+              <span class="tag">Likelihood Construction</span>
+              <span class="tag tag-accent">Active</span>
+            </div>
+          </div>
+        </div>
+        <div class="rt-body">
+          <div class="rt-description">
+            <p>
+              Joint inference across heterogeneous data — gravitational wave strain,
+              X-ray pulse profiles, radio timing masses — requires careful likelihood
+              construction and efficient sampling. I develop end-to-end pipelines that
+              fold nuclear priors directly into the astrophysical parameter space.
+            </p>
+            <p style="margin-top:.85rem;">
+              Current work includes a framework for simultaneous inference over
+              $\{M, R, \Lambda, \varepsilon_c\}$ that propagates uncertainty from
+              nuclear saturation properties through to macroscopic observables.
+            </p>
+          </div>
+          <div class="rt-eq">
+            <span class="eq-label">Bayes' theorem</span>
+            <div class="eq-render">
+              $$\mathcal{P}(\theta \mid d) \propto \mathcal{L}(d \mid \theta)\,\pi(\theta)$$
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Thread 4 -->
+      <div class="research-thread reveal delay-300">
+        <div class="rt-header">
+          <div class="rt-number">04</div>
+          <div>
+            <h3>Dark Matter in Compact Stars</h3>
+            <div class="rt-tags">
+              <span class="tag">Fermionic DM</span>
+              <span class="tag">Bosonic DM</span>
+              <span class="tag">Multi-density Constraints</span>
+            </div>
+          </div>
+        </div>
+        <div class="rt-body">
+          <div class="rt-description">
+            <p>
+              Dark matter (DM) accumulated in neutron stars modifies their structure and
+              observable properties. In collaboration with Payaswinee Arvikar, Sakshi Gautam,
+              and Sarmistha Banik, I carry out Bayesian studies of fermionic and bosonic DM
+              admixed neutron stars, constraining DM parameters from multi-density observations.
+            </p>
+          </div>
+          <div class="rt-eq">
+            <span class="eq-label">DM-modified TOV system</span>
+            <div class="eq-render">
+              $$\varepsilon_{\rm tot} = \varepsilon_{\rm NM}(n_b) + \varepsilon_{\rm DM}(n_{\rm DM})$$
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ── Methods & Tools ─────────────────────────────────────── -->
+  <section class="section">
+    <div class="container">
+      <header class="section-header reveal">
+        <span class="label">Methodology</span>
+        <h2>Methods &amp; Tools</h2>
+      </header>
+
+      <div class="methods-grid">
+        <div class="method-block reveal delay-100">
+          <h4>Statistical</h4>
+          <ul class="method-list">
+            <li>Markov Chain Monte Carlo (MCMC)</li>
+            <li>Nested sampling (MultiNest, dynesty)</li>
+            <li>Bayesian model comparison</li>
+            <li>Posterior predictive analysis</li>
+            <li>Fisher matrix forecasting</li>
+          </ul>
+        </div>
+        <div class="method-block reveal delay-200">
+          <h4>Nuclear Theory</h4>
+          <ul class="method-list">
+            <li>Relativistic mean field (RMF)</li>
+            <li>Skyrme–Hartree–Fock</li>
+            <li>Nuclear meta-modelling</li>
+            <li>Symmetry energy parameterisation</li>
+            <li>Chiral EFT inputs</li>
+          </ul>
+        </div>
+        <div class="method-block reveal delay-300">
+          <h4>Observational Data</h4>
+          <ul class="method-list">
+            <li>NICER mass–radius posteriors</li>
+            <li>LIGO/Virgo tidal deformability</li>
+            <li>Shapiro delay masses (Shapiro)</li>
+            <li>Nuclear binding energies &amp; radii</li>
+            <li>Mirror nuclei charge radii</li>
+          </ul>
+        </div>
+        <div class="method-block reveal delay-400">
+          <h4>Computational</h4>
+          <ul class="method-list">
+            <li>Python (NumPy, SciPy, Matplotlib)</li>
+            <li>TOV solver (custom)</li>
+            <li>Tidal deformability computation</li>
+            <li>Parallelised MCMC pipelines</li>
+            <li>GitHub Actions CI/CD</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ── Collaborators ──────────────────────────────────────── -->
+  <section class="section">
+    <div class="container">
+      <header class="section-header reveal">
+        <span class="label">Network</span>
+        <h2>Collaborators</h2>
+      </header>
+
+      <div class="collab-grid">
+        <div class="collab-card reveal delay-100">
+          <div class="collab-name">Sarmistha Banik</div>
+          <div class="collab-role">Primary Supervisor</div>
+          <div class="collab-inst">BITS Pilani, Hyderabad</div>
+        </div>
+        <div class="collab-card reveal delay-150">
+          <div class="collab-name">Sakshi Gautam</div>
+          <div class="collab-role">Collaborator</div>
+          <div class="collab-inst">BITS Pilani, Hyderabad</div>
+        </div>
+        <div class="collab-card reveal delay-200">
+          <div class="collab-name">B.K. Agrawal</div>
+          <div class="collab-role">Collaborator</div>
+          <div class="collab-inst">Saha Institute, Kolkata</div>
+        </div>
+        <div class="collab-card reveal delay-250">
+          <div class="collab-name">Tuhin Malik</div>
+          <div class="collab-role">Collaborator</div>
+          <div class="collab-inst">Coimbra University</div>
+        </div>
+        <div class="collab-card reveal delay-300">
+          <div class="collab-name">Debanjan Guha Roy</div>
+          <div class="collab-role">Collaborator</div>
+          <div class="collab-inst">BITS Pilani, Hyderabad</div>
+        </div>
+        <div class="collab-card reveal delay-350">
+          <div class="collab-name">Payaswinee Arvikar</div>
+          <div class="collab-role">Collaborator</div>
+          <div class="collab-inst">BITS Pilani, Hyderabad</div>
+        </div>
+        <div class="collab-card reveal delay-400">
+          <div class="collab-name">Swastik Bhattacharya</div>
+          <div class="collab-role">Collaborator</div>
+          <div class="collab-inst">BITS Pilani, Hyderabad</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a class="icon-link" href="../index.html">Home</a>
+        <a class="icon-link" href="publications.html">Publications</a>
+        <a class="icon-link" href="dashboard.html">Dashboard</a>
+        <a class="icon-link" href="timeline.html">Timeline</a>
+        <a class="icon-link" href="notes.html">Notes</a>
+        <a class="icon-link" href="contact.html">Contact</a>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Anagh Venneti. All rights reserved.</p>
+        <p>BITS Pilani Hyderabad · Computational Astrophysics</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/nav.js"></script>
+<script src="../js/doc-access.js" defer></script>
+</body>
+</html>

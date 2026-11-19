@@ -1,0 +1,181 @@
+/* ============================================================
+   research.css  —  Research page styles
+   ============================================================ */
+
+/* ── Research statement ────────────────────────────────────── */
+.research-statement {
+  display: grid;
+  grid-template-columns: 4px 1fr;
+  gap: 0 2rem;
+  padding: 0.5rem 0;
+}
+.rs-accent-bar {
+  background: linear-gradient(to bottom, var(--text-accent), rgba(196,169,125,0.1));
+  border-radius: 2px;
+}
+.rs-lead {
+  font-family: var(--font-serif);
+  font-size: 1.12rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+.rs-text p { font-size: 0.93rem; color: var(--text-muted); line-height: 1.75; }
+
+/* ── Research threads ──────────────────────────────────────── */
+.research-thread {
+  border-top: 1px solid var(--border-subtle);
+  padding: 2.5rem 0;
+}
+.research-thread:last-child { border-bottom: 1px solid var(--border-subtle); }
+
+.rt-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+.rt-number {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-accent);
+  opacity: 0.6;
+  letter-spacing: 0.1em;
+  padding-top: 0.4rem;
+  min-width: 28px;
+}
+.rt-header h3 {
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  margin-bottom: 0.6rem;
+}
+.rt-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+.rt-body {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 3rem;
+  padding-left: 44px; /* align with header text */
+}
+.rt-description p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.75; }
+
+/* Equation block in research thread */
+.rt-eq {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-left: 2px solid var(--border-accent);
+  border-radius: 3px;
+  padding: 1.25rem 1.5rem;
+  align-self: start;
+}
+.rt-eq .eq-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+.eq-render {
+  color: var(--text-accent2);
+  font-size: 0.9rem;
+  overflow-x: auto;
+}
+/* KaTeX overrides for dark theme */
+.katex { color: var(--text-accent2) !important; font-size: 0.92em !important; }
+.katex .mord, .katex .mrel, .katex .mop,
+.katex .mbin, .katex .mopen, .katex .mclose { color: var(--text-accent2) !important; }
+
+/* ── Methods grid ──────────────────────────────────────────── */
+.methods-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.method-block {
+  background: var(--bg-base);
+  padding: 1.75rem 1.5rem;
+  transition: background 0.2s;
+}
+.method-block:hover { background: var(--bg-surface); }
+.method-block h4 {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-accent);
+  margin-bottom: 1rem;
+}
+.method-list { padding: 0; }
+.method-list li {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  padding: 0.35rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+  line-height: 1.4;
+}
+.method-list li:last-child { border-bottom: none; }
+.method-list li::before {
+  content: '·';
+  color: var(--text-accent);
+  margin-right: 0.5rem;
+  font-size: 1em;
+}
+
+/* ── Collaborators ─────────────────────────────────────────── */
+.collab-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.collab-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 3px;
+  padding: 1.25rem;
+  transition: border-color 0.2s, background 0.2s;
+}
+.collab-card:hover { border-color: var(--border-mid); background: var(--bg-raised); }
+.collab-name {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+}
+.collab-role {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-accent);
+  opacity: 0.75;
+  margin-bottom: 0.25rem;
+}
+.collab-inst {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* ── Responsive ────────────────────────────────────────────── */
+@media (max-width: 960px) {
+  .rt-body { grid-template-columns: 1fr; gap: 1.5rem; }
+  .rt-eq { max-width: 480px; }
+  .methods-grid { grid-template-columns: repeat(2, 1fr); }
+  .collab-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 640px) {
+  .rt-body { padding-left: 0; }
+  .methods-grid { grid-template-columns: 1fr; }
+  .collab-grid { grid-template-columns: repeat(2, 1fr); }
+  .research-statement { grid-template-columns: 1fr; }
+  .rs-accent-bar { display: none; }
+}
+@media (max-width: 400px) {
+  .collab-grid { grid-template-columns: 1fr; }
+}

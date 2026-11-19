@@ -1,0 +1,79 @@
+{
+  "last_updated": "2025-05-30T00:00:00Z",
+  "notes": [
+    {
+      "id": "tov-derivation",
+      "title": "Derivation of the Tolman–Oppenheimer–Volkoff Equations",
+      "category": "derivations",
+      "tags": ["GR", "neutron stars", "stellar structure", "TOV"],
+      "date": "2025-05-20",
+      "excerpt": "A careful derivation of the TOV equations from the Einstein field equations applied to a static, spherically symmetric perfect fluid. Starting from the Schwarzschild metric ansatz and the stress-energy tensor of a perfect fluid.",
+      "filename": "tov-derivation.md",
+      "featured": true,
+      "reading_time": 12
+    },
+    {
+      "id": "bayesian-eos-primer",
+      "title": "A Bayesian Primer for Equation of State Inference",
+      "category": "bayesian-methods",
+      "tags": ["Bayesian", "MCMC", "EOS", "inference", "tutorial"],
+      "date": "2025-05-10",
+      "excerpt": "How to set up a Bayesian inference problem for neutron star EOS constraints. Covers prior construction from nuclear physics, likelihood construction from NICER and GW data, and posterior sampling strategies.",
+      "filename": "bayesian-eos-primer.md",
+      "featured": true,
+      "reading_time": 18
+    },
+    {
+      "id": "symmetry-energy-review",
+      "title": "Nuclear Symmetry Energy: Constraints and Open Questions",
+      "category": "literature-reviews",
+      "tags": ["symmetry energy", "nuclear matter", "EOS", "review"],
+      "date": "2025-04-28",
+      "excerpt": "Review of current experimental and observational constraints on the nuclear symmetry energy slope parameter L, from isospin diffusion experiments to neutron star radius measurements.",
+      "filename": "symmetry-energy-review.md",
+      "featured": false,
+      "reading_time": 15
+    },
+    {
+      "id": "mcmc-convergence-notes",
+      "title": "MCMC Convergence Diagnostics for High-Dimensional EOS Sampling",
+      "category": "computational",
+      "tags": ["MCMC", "convergence", "Gelman-Rubin", "emcee", "Python"],
+      "date": "2025-04-15",
+      "excerpt": "Practical notes on diagnosing convergence in high-dimensional MCMC chains for EOS inference. Covers Gelman-Rubin diagnostics, autocorrelation lengths, and when to trust your posterior.",
+      "filename": "mcmc-convergence-notes.md",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "phase-transition-open-questions",
+      "title": "Open Questions on the Hadron-Quark Phase Transition",
+      "category": "open-problems",
+      "tags": ["phase transition", "quark matter", "hybrid stars", "open problems"],
+      "date": "2025-04-03",
+      "excerpt": "A working list of unresolved questions about the hadron-quark phase transition in neutron star interiors. What are the observational signatures? Is the Maxwell construction physical?",
+      "filename": "phase-transition-open-questions.md",
+      "featured": true,
+      "reading_time": 8
+    },
+    {
+      "id": "nicer-data-notes",
+      "title": "Working Notes: Interpreting NICER X-ray Posteriors",
+      "category": "thesis-notes",
+      "tags": ["NICER", "X-ray", "mass-radius", "posteriors"],
+      "date": "2025-03-22",
+      "excerpt": "Notes on how to properly use NICER mass-radius posterior samples in an EOS inference pipeline. Covers coordinate conventions, KDE interpolation of posteriors, and common pitfalls.",
+      "filename": "nicer-data-notes.md",
+      "featured": false,
+      "reading_time": 9
+    }
+  ],
+  "categories": {
+    "derivations":       { "label": "Derivations",        "count": 1 },
+    "bayesian-methods":  { "label": "Bayesian Methods",   "count": 1 },
+    "literature-reviews":{ "label": "Literature Reviews", "count": 1 },
+    "computational":     { "label": "Computational",      "count": 1 },
+    "open-problems":     { "label": "Open Problems",      "count": 1 },
+    "thesis-notes":      { "label": "Thesis Notes",       "count": 1 }
+  }
+}

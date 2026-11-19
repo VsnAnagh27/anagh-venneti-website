@@ -1,0 +1,58 @@
+{
+  "last_updated": "2026-11-19T18:29:49.943345Z",
+  "scholar_id": "VMa_jXYAAAAJ",
+  "summary": {
+    "scholar_records": 17,
+    "verified_crossref": 10,
+    "retained_from_cache": 0,
+    "excluded_preprints": 2,
+    "needs_review": 5
+  },
+  "records_requiring_manual_review": [
+    {
+      "title": "A machine learning framework for explicit finite nuclei constraints: NucleiML",
+      "scholar_year": 2025,
+      "scholar_citation": "Proceedings of the DAE Symp. on Nucl. Phys 69, 1225, 2025",
+      "scholar_citations": 0,
+      "reason": "title match below 0.90 threshold",
+      "best_title_similarity": 0.667,
+      "instruction": "Verify publication status and author list manually. Do not add to public publications.json until verified."
+    },
+    {
+      "title": "Short-range correlations and their implications on neutron star observables",
+      "scholar_year": 2025,
+      "scholar_citation": "Proceedings of the DAE Symp. on Nucl. Phys 69, 775, 2025",
+      "scholar_citations": 0,
+      "reason": "title match below 0.90 threshold",
+      "best_title_similarity": 0.773,
+      "instruction": "Verify publication status and author list manually. Do not add to public publications.json until verified."
+    },
+    {
+      "title": "Constraining Fermionic Dark Matter parameter space with the astrophysical observations of neutron stars",
+      "scholar_year": 2025,
+      "scholar_citation": "Proceedings of the DAE Symp. on Nucl. Phys 69, 791, 2025",
+      "scholar_citations": 0,
+      "reason": "title match below 0.90 threshold",
+      "best_title_similarity": 0.73,
+      "instruction": "Verify publication status and author list manually. Do not add to public publications.json until verified."
+    },
+    {
+      "title": "Study of correlation between tidal deformability of neutron Star and nuclear matter parameters",
+      "scholar_year": 2022,
+      "scholar_citation": "Proceedings of the DAE Symp. on Nucl. Phys 66, 792, 2022",
+      "scholar_citations": 0,
+      "reason": "title match below 0.90 threshold",
+      "best_title_similarity": 0.589,
+      "instruction": "Verify publication status and author list manually. Do not add to public publications.json until verified."
+    },
+    {
+      "title": "Bayesian Cross-Validation of Neutron and Quark Star Models with NICER and Gravitational-Wave Constraints",
+      "scholar_year": null,
+      "scholar_citation": "Available at SSRN 7675165, 0",
+      "scholar_citations": 0,
+      "reason": "no matching published Crossref work",
+      "best_title_similarity": 1.0,
+      "instruction": "Verify publication status and author list manually. Do not add to public publications.json until verified."
+    }
+  ]
+}

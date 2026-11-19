@@ -1,0 +1,277 @@
+/* ============================================================
+   dashboard.css  —  Analytics dashboard styles
+   ============================================================ */
+
+/* ── Page header ───────────────────────────────────────────── */
+.dash-page-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.dash-update-note {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.2rem;
+}
+
+/* ── Metric cards ──────────────────────────────────────────── */
+.metric-cards {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1px;
+  background: var(--border-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.metric-card {
+  background: var(--bg-base);
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  transition: background 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.metric-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--card-accent, var(--border-subtle));
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.metric-card:hover { background: var(--bg-surface); }
+.metric-card:hover::before { opacity: 1; }
+
+.mc-val {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--text-primary);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.mc-lbl {
+  font-family: var(--font-mono);
+  font-size: 0.63rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.mc-sub {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-accent2);
+  margin-top: 0.25rem;
+}
+
+/* ── Charts ────────────────────────────────────────────────── */
+.charts-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.chart-panel {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  padding: 1.75rem;
+  transition: border-color 0.2s;
+}
+.chart-panel:hover { border-color: var(--border-mid); }
+
+.chart-panel-header {
+  margin-bottom: 1.5rem;
+}
+.chart-panel-header .label { display: block; margin-bottom: 0.3rem; }
+.chart-panel-header h3 {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+.chart-wrap {
+  position: relative;
+  height: 220px;
+}
+.chart-wrap-donut {
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chart-wrap-donut canvas {
+  max-height: 240px !important;
+}
+
+/* ── Publication timeline ──────────────────────────────────── */
+.pub-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.timeline-year-section {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 0 2rem;
+}
+.timeline-year-label {
+  padding-top: 1.5rem;
+  text-align: right;
+  position: sticky;
+  top: calc(var(--nav-h) + 1rem);
+  align-self: start;
+}
+.timeline-year-label span {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-accent);
+  letter-spacing: 0.06em;
+}
+.timeline-items {
+  border-left: 1px solid var(--border-subtle);
+  padding: 0 0 0.5rem;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem 0 1.25rem 2rem;
+  border-bottom: 1px solid var(--border-subtle);
+  position: relative;
+}
+.timeline-item:last-child { border-bottom: none; }
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 1.75rem;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--bg-border);
+  border: 1px solid var(--border-mid);
+  transition: background 0.2s, border-color 0.2s;
+}
+.timeline-item.first-author::before {
+  background: var(--text-accent);
+  border-color: var(--text-accent);
+  box-shadow: 0 0 8px rgba(196,169,125,0.4);
+}
+
+.ti-body { flex: 1; }
+.ti-journal {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-accent2);
+  opacity: 0.8;
+  margin-bottom: 0.3rem;
+}
+.ti-title {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  line-height: 1.4;
+  margin-bottom: 0.35rem;
+}
+.ti-authors {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 300;
+}
+.ti-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.4rem;
+  min-width: 90px;
+  padding-top: 0.1rem;
+}
+.ti-doi-link {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  transition: color 0.2s;
+}
+.ti-doi-link:hover { color: var(--text-accent); }
+
+/* ── Journal table ─────────────────────────────────────────── */
+.journal-table {
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.jt-row {
+  display: grid;
+  grid-template-columns: 1fr 80px 80px;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+  align-items: center;
+  transition: background 0.15s;
+}
+.jt-row:last-child { border-bottom: none; }
+.jt-row:hover { background: var(--bg-surface); }
+.jt-row.jt-header {
+  background: var(--bg-surface);
+  border-bottom-color: var(--border-mid);
+}
+.jt-header span {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.jt-name {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+.jt-count {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  text-align: center;
+}
+.jt-bar-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.jt-bar {
+  height: 3px;
+  border-radius: 2px;
+  background: var(--text-accent);
+  opacity: 0.6;
+  transition: width 0.6s var(--ease-out);
+}
+
+/* ── Responsive ────────────────────────────────────────────── */
+@media (max-width: 960px) {
+  .metric-cards { grid-template-columns: repeat(3, 1fr); }
+  .charts-row-2 { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .metric-cards { grid-template-columns: repeat(2, 1fr); }
+  .timeline-year-section { grid-template-columns: 1fr; }
+  .timeline-year-label { text-align: left; padding: 1rem 0 0.25rem; position: static; }
+  .timeline-items { border-left: none; }
+  .timeline-item { padding-left: 0; }
+  .timeline-item::before { display: none; }
+  .ti-meta { flex-direction: row; align-items: center; }
+}
+@media (max-width: 420px) {
+  .metric-cards { grid-template-columns: 1fr 1fr; }
+}

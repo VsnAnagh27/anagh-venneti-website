@@ -1,0 +1,159 @@
+{
+  "last_updated": "2026-05-29T08:48:00Z",
+  "scholar_id": "VMa_jXYAAAAJ",
+  "researcher": {
+    "name": "Anagh Venneti",
+    "affiliation": "Birla Institute of Technology and Science, Hyderabad",
+    "field": "Neutron Stars, Dense Matter Equation of State, Bayesian Astrophysics"
+  },
+  "metrics": {
+    "note": "Metrics should be updated directly from Google Scholar if exact live values are required."
+  },
+  "publications": [
+    {
+      "id": "venneti2024explicit",
+      "title": "Unraveling the global behavior of equation of state by explicit finite nuclei constraints",
+      "authors": [
+        "Anagh Venneti",
+        "Sakshi Gautam",
+        "Sarmistha Banik",
+        "B.K. Agrawal"
+      ],
+      "first_author": true,
+      "year": 2024,
+      "journal": "Physics Letters B",
+      "doi": "10.1016/j.physletb.2024.138756",
+      "topics": [
+        "equation of state",
+        "finite nuclei",
+        "neutron stars",
+        "nuclear astrophysics"
+      ],
+      "featured": true
+    },
+    {
+      "id": "roy2024bayesian",
+      "title": "Bayesian evaluation of hadron-quark phase transition models through neutron star observables in light of nuclear and astrophysics data",
+      "authors": [
+        "Debanjan Guha Roy",
+        "Anagh Venneti",
+        "Tuhin Malik",
+        "Swastik Bhattacharya",
+        "Sarmistha Banik"
+      ],
+      "first_author": false,
+      "year": 2024,
+      "journal": "Physics Letters B",
+      "doi": "10.1016/j.physletb.2024.139128",
+      "topics": [
+        "Bayesian inference",
+        "phase transitions",
+        "hybrid stars",
+        "dense matter"
+      ],
+      "featured": true
+    },
+    {
+      "id": "gautam2024symmetry",
+      "title": "Estimation of the slope of nuclear symmetry energy via charge radii of mirror nuclei",
+      "authors": [
+        "Sakshi Gautam",
+        "Anagh Venneti",
+        "Sarmistha Banik",
+        "B.K. Agrawal"
+      ],
+      "first_author": false,
+      "year": 2024,
+      "journal": "Nuclear Physics A",
+      "doi": "10.1016/j.nuclphysa.2024.122832",
+      "topics": [
+        "symmetry energy",
+        "mirror nuclei",
+        "nuclear structure",
+        "equation of state"
+      ],
+      "featured": false
+    },
+    {
+      "id": "gautam2025src",
+      "title": "Re-visiting the role of short-range correlations on neutron-star properties",
+      "authors": [
+        "Sakshi Gautam",
+        "Anagh Venneti",
+        "Sarmistha Banik",
+        "B.K. Agrawal"
+      ],
+      "first_author": false,
+      "year": 2025,
+      "journal": "Nuclear Physics A",
+      "doi": "10.1016/j.nuclphysa.2024.122978",
+      "topics": [
+        "short-range correlations",
+        "neutron stars",
+        "equation of state"
+      ],
+      "featured": false
+    },
+    {
+      "id": "gautam2023systematic",
+      "title": "Systematic analysis of the impacts of symmetry energy parameters on neutron star properties",
+      "authors": [
+        "Sakshi Gautam",
+        "Anagh Venneti",
+        "Sarmistha Banik"
+      ],
+      "first_author": false,
+      "year": 2023,
+      "journal": "Physical Review C",
+      "doi": "10.1103/PhysRevC.107.055804",
+      "topics": [
+        "symmetry energy",
+        "neutron stars",
+        "equation of state",
+        "compact stars"
+      ],
+      "featured": false
+    },
+    {
+      "id": "arvikar2025fermionic",
+      "title": "Exploring fermionic dark matter admixed neutron stars in the light of astrophysical observations",
+      "authors": [
+        "Payaswinee Arvikar",
+        "Sakshi Gautam",
+        "Anagh Venneti",
+        "Sarmistha Banik"
+      ],
+      "first_author": false,
+      "year": 2025,
+      "journal": "Physical Review D",
+      "doi": "10.1103/kwwx-54wq",
+      "topics": [
+        "dark matter",
+        "neutron stars",
+        "Bayesian analysis"
+      ],
+      "featured": false
+    },
+    {
+      "id": "arvikar2026bosonic",
+      "title": "Fermionic versus Bosonic Dark Matter in Neutron Stars: A Bayesian study with multi-density constraints",
+      "authors": [
+        "Payaswinee Arvikar",
+        "Sakshi Gautam",
+        "Anagh Venneti",
+        "Sarmistha Banik"
+      ],
+      "first_author": false,
+      "year": 2026,
+      "journal": "Journal of Cosmology and Astroparticle Physics",
+      "doi": "10.1088/1475-7516/2026/03/012",
+      "topics": [
+        "dark matter",
+        "Bayesian inference",
+        "multi-density constraints",
+        "compact stars"
+      ],
+      "featured": true
+    }
+  ]
+}

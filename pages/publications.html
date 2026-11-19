@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Publications — Anagh Venneti, Computational Astrophysics. Research papers on neutron stars, EOS, gravitational waves, and Bayesian inference." />
+  <title>Publications — Anagh Venneti</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@300;400;500&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/publications.css" />
+</head>
+<body>
+
+<!-- ═══════════════════ NAV ═══════════════════════════════════ -->
+<nav id="nav" role="navigation">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">A.<span>Venneti</span></a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html" class="active">Publications</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="notes.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="../assets/thesis.pdf" data-doc-access="thesis" data-doc-url="../assets/thesis.pdf" target="_blank">Thesis</a>
+      <a href="../assets/cv.pdf" class="btn btn-sm" style="margin-left:.5rem;" target="_blank" data-doc-access="cv" data-doc-url="../assets/cv.pdf">CV</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="nav-mobile">
+  <a href="../index.html">Home</a>
+  <a href="research.html">Research</a>
+  <a href="publications.html">Publications</a>
+  <a href="dashboard.html">Dashboard</a>
+  <a href="timeline.html">Timeline</a>
+  <a href="notes.html">Blog</a>
+  <a href="contact.html">Contact</a>
+  <a href="../assets/cv.pdf" target="_blank" data-doc-access="cv" data-doc-url="../assets/cv.pdf">Curriculum Vitae ↗</a>
+</div>
+
+<!-- ═══════════════════ MAIN ══════════════════════════════════ -->
+<main class="page-content">
+
+  <!-- Page header -->
+  <section class="section-sm" style="border-bottom:1px solid var(--border-subtle);">
+    <div class="container">
+      <div class="animate-fade-up">
+        <span class="label">Research output</span>
+        <h1 style="margin-top:.6rem; font-size:clamp(1.8rem,4vw,2.8rem);">Publications</h1>
+      </div>
+      <p class="animate-fade-up delay-100" style="margin-top:.75rem; max-width:600px;">
+        Peer-reviewed articles, preprints, and letters on neutron star astrophysics,
+        dense matter physics, gravitational waves, and Bayesian statistical methods.
+        Data updated automatically from Google Scholar.
+      </p>
+
+      <!-- External profile links -->
+      <div class="pub-profile-links animate-fade-up delay-200">
+        <a class="icon-link" href="https://scholar.google.co.in/citations?user=VMa_jXYAAAAJ&hl=en" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+          Google Scholar
+        </a>
+        <a class="icon-link" href="https://arxiv.org/search/advanced?advanced=1&terms-0-operator=AND&terms-0-term=%22Anagh+Venneti%22&terms-0-field=author&classification-physics_archives=all&classification-include_cross_list=include&date-filter_by=all_dates&date-year=&date-from_date=&date-to_date=&date-date_type=submitted_date&abstracts=show&size=50&order=-announced_date_first" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          arXiv
+        </a>
+        <a class="icon-link" href="https://orcid.org/0000-0002-0812-2702" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="12" y2="12"/></svg>
+          ORCID
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- Metrics bar -->
+      <div class="pub-stats-bar animate-fade-up" id="pub-stats">
+        <div class="loading-dots"><span></span><span></span><span></span></div>
+      </div>
+
+      <!-- Controls: filter + sort -->
+      <div class="pub-controls animate-fade-up delay-100">
+        <div class="pub-filters" role="group" aria-label="Filter publications by topic">
+          <button data-filter="all" class="active">All</button>
+          <button data-filter="first-author">First Author</button>
+          <button data-filter="neutron stars">Neutron Stars</button>
+          <button data-filter="EOS">EOS</button>
+          <button data-filter="gravitational waves">Gravitational Waves</button>
+          <button data-filter="Bayesian inference">Bayesian</button>
+          <button data-filter="computational methods">Computational</button>
+        </div>
+
+        <div class="pub-sort">
+          <label for="sort-select">Sort</label>
+          <select id="sort-select" aria-label="Sort publications">
+            <option value="year-desc">Year ↓</option>
+            <option value="year-asc">Year ↑</option>
+            <option value="cited">Most cited</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Result count -->
+      <p style="font-family:var(--font-mono);font-size:.7rem;color:var(--text-muted);margin-bottom:2rem;">
+        Showing <span id="pub-count">…</span> publication(s)
+      </p>
+
+      <!-- Publication list (injected by publications.js) -->
+      <div id="pub-list" aria-live="polite">
+        <div style="padding:3rem 0; text-align:center;">
+          <div class="loading-dots" style="justify-content:center;"><span></span><span></span><span></span></div>
+          <p style="font-family:var(--font-mono);font-size:.72rem;color:var(--text-muted);margin-top:1rem;">Loading publications…</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Placeholder: Dashboard link (Phase 2) -->
+  <section class="section-sm" style="border-top:1px solid var(--border-subtle);">
+    <div class="container">
+      <div class="placeholder-banner reveal">
+        <div>
+          <span class="label">Research Analytics</span>
+          <p style="margin-top:.4rem;">Citation growth charts, publication timeline, and co-author network — available in the Dashboard.</p>
+        </div>
+        <a href="dashboard.html" class="btn">Dashboard</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a class="icon-link" href="../index.html">Home</a>
+        <a class="icon-link" href="research.html">Research</a>
+        <a class="icon-link" href="publications.html">Publications</a>
+        <a class="icon-link" href="contact.html">Contact</a>
+        <a class="icon-link" href="../assets/cv.pdf" target="_blank" data-doc-access="cv" data-doc-url="../assets/cv.pdf">CV ↗</a>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Anagh Venneti. All rights reserved.</p>
+        <p>Publication data updated automatically via GitHub Actions.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/nav.js"></script>
+<script src="../js/publications.js"></script>
+
+<!-- Additional pub-page style fixes for sub-page paths -->
+<style>
+  .pub-profile-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.75rem;
+    margin-top: 1.25rem;
+  }
+  /* Placeholder banner */
+  .placeholder-banner { flex-wrap: wrap; gap: 1rem; }
+</style>
+
+<script src="../js/doc-access.js" defer></script>
+</body>
+</html>

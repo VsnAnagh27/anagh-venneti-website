@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Anagh Venneti — Computational Astrophysics researcher at IISER Bhopal." />
+  <title>Contact — Anagh Venneti</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@300;400;500&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/main.css" />
+  <style>
+    /* ── Contact-specific styles ──────────────────────────── */
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .contact-intro {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      margin-bottom: 2.5rem;
+      max-width: 500px;
+    }
+
+    .contact-methods { display: flex; flex-direction: column; gap: 0; }
+
+    .contact-method {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 1.5rem;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--border-subtle);
+      align-items: start;
+      transition: background 0.15s;
+    }
+    .contact-method:first-child { padding-top: 0; }
+    .contact-method:last-child { border-bottom: none; }
+
+    .cm-label {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      padding-top: 0.1rem;
+    }
+
+    .cm-value {
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      color: var(--text-primary);
+      line-height: 1.5;
+    }
+    .cm-value a { color: var(--text-accent); }
+    .cm-value a:hover { text-decoration: underline; text-underline-offset: 3px; }
+    .cm-sub {
+      display: block;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    /* Info sidebar */
+    .contact-sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+
+    .sidebar-block {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 4px;
+      padding: 1.5rem;
+    }
+    .sidebar-block .label { display: block; margin-bottom: 1rem; }
+
+    .profile-links { display: flex; flex-direction: column; gap: 0.6rem; }
+    .profile-link-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      transition: color 0.2s;
+    }
+    .profile-link-item:last-child { border-bottom: none; }
+    .profile-link-item:hover { color: var(--text-accent); }
+    .profile-link-item .pli-label { letter-spacing: 0.05em; text-transform: uppercase; font-size: 0.65rem; }
+    .profile-link-item .pli-val { color: var(--text-secondary); font-size: 0.72rem; }
+
+    .address-block p {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      line-height: 2;
+      color: var(--text-muted);
+    }
+
+    /* PGP / note block */
+    .note-block {
+      background: rgba(196,169,125,0.04);
+      border: 1px solid var(--border-accent);
+      border-radius: 3px;
+      padding: 1rem 1.25rem;
+    }
+    .note-block p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+    .note-block strong { color: var(--text-secondary); }
+
+    /* Map placeholder */
+    .map-placeholder {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 4px;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .map-placeholder .label { display: block; margin-bottom: 0.5rem; }
+    .map-placeholder p { font-size: 0.8rem; }
+
+    @media (max-width: 768px) {
+      .contact-layout { grid-template-columns: 1fr; gap: 3rem; }
+      .contact-method { grid-template-columns: 1fr; gap: 0.3rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════ NAV ═══════════════════════════════════ -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">A.<span>Venneti</span></a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="notes.html">Blog</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a href="../assets/thesis.pdf" data-doc-access="thesis" data-doc-url="../assets/thesis.pdf" target="_blank">Thesis</a>
+      <a href="../assets/cv.pdf" class="btn btn-sm" style="margin-left:.5rem;" target="_blank" data-doc-access="cv" data-doc-url="../assets/cv.pdf">CV</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="nav-mobile">
+  <a href="../index.html">Home</a>
+  <a href="research.html">Research</a>
+  <a href="publications.html">Publications</a>
+  <a href="dashboard.html">Dashboard</a>
+  <a href="timeline.html">Timeline</a>
+  <a href="notes.html">Blog</a>
+  <a href="contact.html">Contact</a>
+  <a href="../assets/cv.pdf" target="_blank" data-doc-access="cv" data-doc-url="../assets/cv.pdf">Curriculum Vitae ↗</a>
+</div>
+
+<!-- ═══════════════════ MAIN ══════════════════════════════════ -->
+<main class="page-content">
+
+  <section class="section-sm" style="border-bottom:1px solid var(--border-subtle);">
+    <div class="container">
+      <div class="animate-fade-up">
+        <span class="label">Get in touch</span>
+        <h1 style="margin-top:.6rem; font-size:clamp(1.8rem,4vw,2.8rem);">Contact</h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- Left: contact methods -->
+        <div>
+          <p class="contact-intro animate-fade-up">
+            I am an early-career researcher, having recently completed my PhD in Nuclear Astrophysics at BITS Pilani, Hyderabad. My doctoral research focused on neutron star structure, dense matter equations of state, and the application of Bayesian inference and computational methods to compact star physics. My broader research interests span nuclear astrophysics, multi-messenger astronomy, gravitational-wave observations, and the phenomenology of compact objects.
+
+Beyond these areas, I have a keen interest in exploring the theoretical foundations of gravitation and fundamental interactions, particularly General Relativity (GR), Quantum Field Theory (QFT), and approaches towards Quantum Gravity (QG). I am interested in understanding how these frameworks can inform our description of matter under extreme conditions, strong gravitational fields, and the physics of compact objects.
+
+I am currently seeking postdoctoral research opportunities and am keen to expand my research horizons through collaborations across nuclear theory, gravitational physics, and computational astrophysics. I welcome scientific discussions and opportunities to work with researchers and institutions exploring these interconnected areas.
+          </p>
+
+          <div class="contact-methods">
+
+            <div class="contact-method reveal">
+              <span class="cm-label">Email</span>
+              <div class="cm-value">
+                <a href="mailto:anagh.venneti@gmail.com">anagh.venneti@gmail.com</a>
+                <span class="cm-sub">Primary</span>
+              </div>
+            </div>
+
+
+            <div class="contact-method reveal">
+              <span class="cm-label">Email</span>
+              <div class="cm-value">
+                <a href="mailto:p20210060@hyderabad.bits-pilani.ac.in">p20210060@hyderabad.bits-pilani.ac.in</a>
+                <span class="cm-sub">Primary — institutional address</span>
+              </div>
+            </div>
+
+            <div class="contact-method reveal delay-100">
+              <span class="cm-label">Office</span>
+              <div class="cm-value">
+                Department of Physics
+                <span class="cm-sub">Birla Institute of Technology and Sciences Pilani, Hyderabad Campus</span>
+              </div>
+            </div>
+
+            <div class="contact-method reveal delay-200">
+              <span class="cm-label">Research Groups</span>
+              <div class="cm-value">
+                Nuclear Astrophysics Group
+                <span class="cm-sub">Department of Physics, BITS Pilani, Hyderabad Campus</span>
+              </div>
+            </div>
+
+            <div class="contact-method reveal delay-300">
+              <span class="cm-label">Response Time</span>
+              <div class="cm-value">
+                Typically 2–5 business days
+                <span class="cm-sub">For urgent matters related to ongoing collaborations, please indicate so in the subject line.</span>
+              </div>
+            </div>
+
+            <div class="contact-method reveal delay-400">
+              <span class="cm-label">Collaboration</span>
+              <div class="cm-value">
+                Open to collaborations in neutron star EOS and Bayesian inference.
+                <span class="cm-sub">Post doctoral offers welcome.</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Right: sidebar -->
+        <div class="contact-sidebar">
+
+          <div class="sidebar-block reveal delay-100">
+            <span class="label">Online Profiles</span>
+            <div class="profile-links">
+              <a class="profile-link-item" href="https://scholar.google.co.in/citations?user=VMa_jXYAAAAJ&hl=en" target="_blank" rel="noopener">
+                <span class="pli-label">Google Scholar</span>
+                <span class="pli-val">↗</span>
+              </a>
+              <a class="profile-link-item" href="https://orcid.org/0000-0002-0812-2702" target="_blank" rel="noopener">
+                <span class="pli-label">ORCID</span>
+                <span class="pli-val">0000-0002-0812-2702</span>
+              </a>
+              <a class="profile-link-item" href="https://arxiv.org/search/advanced?advanced=1&terms-0-operator=AND&terms-0-term=%22Anagh+Venneti%22&terms-0-field=author&classification-physics_archives=all&classification-include_cross_list=include&date-filter_by=all_dates&date-year=&date-from_date=&date-to_date=&date-date_type=submitted_date&abstracts=show&size=50&order=-announced_date_first" target="_blank" rel="noopener">
+                <span class="pli-label">arXiv</span>
+                <span class="pli-val">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="sidebar-block address-block reveal delay-200">
+            <span class="label">Postal Address</span>
+            <p>
+              Anagh Venneti<br>
+              Department of Physics<br>
+              Birla Institute of Technology and Sciences Pilani, Hyderabad Campus<br>
+              Hyderabad — 500 078<br>
+              Telangana, India
+            </p>
+          </div>
+
+          <!-- CV download -->
+          <div class="sidebar-block reveal delay-300" style="background:rgba(196,169,125,0.05); border-color:var(--border-accent);">
+            <span class="label">Curriculum Vitae</span>
+            <p style="font-size:.82rem; color:var(--text-muted); margin-bottom:1rem;">Full CV including education, publications, talks, and teaching.</p>
+            <a href="../assets/cv.pdf" target="_blank" class="btn btn-primary" style="width:100%; justify-content:center;" data-doc-access="cv" data-doc-url="../assets/cv.pdf">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download CV (PDF)
+            </a>
+            <a href="../assets/thesis.pdf" data-doc-access="thesis" data-doc-url="../assets/thesis.pdf" target="_blank" class="btn" style="width:100%;justify-content:center;margin-top:.6rem;">PhD Thesis ↗</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a class="icon-link" href="../index.html">Home</a>
+        <a class="icon-link" href="research.html">Research</a>
+        <a class="icon-link" href="publications.html">Publications</a>
+        <a class="icon-link" href="contact.html">Contact</a>
+        <a class="icon-link" href="../assets/cv.pdf" target="_blank" data-doc-access="cv" data-doc-url="../assets/cv.pdf">CV ↗</a>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Anagh Venneti. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/nav.js"></script>
+<script src="../js/doc-access.js" defer></script>
+</body>
+</html>
