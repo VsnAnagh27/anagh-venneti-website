@@ -1,0 +1,21 @@
+# requirements.txt — Anagh Venneti Research Site
+# ============================================================
+
+# ── Phase 1: Publications ────────────────────────────────────
+scholarly>=1.7.11
+python-dotenv>=1.0.0
+requests>=2.31.0
+
+# ── Phase 2: Notes pipeline ──────────────────────────────────
+python-frontmatter>=1.1.0
+markdown>=3.5.2
+pyspellchecker>=0.8.0
+
+# Phase 2 (local watcher — install separately if needed)
+# watchdog>=4.0.0
+
+# ── Phase 3: Future extensions ───────────────────────────────
+# arxiv>=2.1.0          — arXiv API
+# ads>=0.12.6           — NASA ADS API
+# jinja2>=3.1.2         — templating for static generation
+# mistune>=3.0.0        — faster markdown

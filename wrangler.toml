@@ -1,0 +1,7 @@
+name = "anagh-venneti-site"
+pages_build_output_dir = "."
+
+[[d1_databases]]
+binding = "ACCESS_DB"
+database_name = "anagh-document-access"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
